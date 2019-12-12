@@ -1,0 +1,8 @@
+﻿The above contingency table is not very large. 
+Therefore, it's easy to visually inspect and interpret row and column profiles: 
+It's evident that, the housetasks - Laundry, Main_Meal and Dinner - are more frequently done by the "Wife". 
+Repairs and driving are dominantly done by the husband Holidays are frequently associated with the column "jointly" Exploratory data analysis and visualization of contingency tables have been covered in our previous article: Chi-Square test of independence in R. 
+Briefly, contingency table can be visualized using the functions balloonplot() [gplots package] and mosaicplot() [garphics package]
+
+
+ 

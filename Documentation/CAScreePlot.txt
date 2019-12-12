@@ -1,0 +1,12 @@
+Eigenvalues correspond to the amount of information retained by each axis. 
+Dimensions are ordered decreasingly and listed according to the amount of variance explained in the solution. 
+Dimension 1 explains the most variance in the solution, followed by dimension 2 and so on. 
+The cumulative percentage explained is obtained by adding the successive proportions of variation explained to obtain the running total. 
+For instance, 48.69% plus 39.91% equals 88.6%, and so forth. Therefore, about 88.6% of the variation is explained by the first two dimensions. 
+Eigenvalues can be used to determine the number of axes to retain. There is no “rule of thumb” to choose the number of dimensions to keep for the data interpretation. 
+It depends on the research question and the researcher's need. For example, if you are satisfied with 80% of the total variances explained then use the number of dimensions necessary to achieve that.
+
+Note: The point at which the scree plot shows a bend (so called "elbow") can be considered as indicating an optimal dimensionality.
+
+Kassambara, Alboukadel. Practical Guide To Principal Component Methods in R (Multivariate Analysis Book 2) (Kindle Locations 929-930). Kindle Edition. 
+

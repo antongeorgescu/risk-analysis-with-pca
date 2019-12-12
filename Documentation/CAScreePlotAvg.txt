@@ -1,0 +1,13 @@
+Assume the data contains M rows and N columns. 
+If the data were random, the expected value of the eigenvalue for each axis would be 1/(M-1) in terms of the M rows. 
+Likewise, the average axis should account for 1/(N-1) in terms of the N columns.
+
+According to (M. T. Bendixen 1995): 
+Any axis with a contribution larger than the maximum of these two percentages should be considered as important and included in the solution for the interpretation of the data.
+
+According to the graph, only the dimensions above the average dotted red line should be used in the solution. 
+The dimensions under that line explain a total inertia which is below the average eigeinvalue, too little to be kept for further analysis. 
+Note that you can use some of those dimensions too. However, the supplementary dimensions are unlikely to contribute significantly 
+to the interpretation of nature of the association between the rows and columns. 
+
+The higher the retention of the dimensions above the average line, the more subtlety in the original data is retained in the low-dimensional solution (M. Bendixen 2003). 

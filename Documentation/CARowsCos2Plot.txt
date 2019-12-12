@@ -1,0 +1,6 @@
+﻿The quality of representation of the rows on the factor map is called the squared cosine (cos2) or the squared correlations.
+The cos2 measures the degree of association between rows/ columns and a particular axis.
+
+The values of the cos2 are comprised between 0 and 1. The sum of the cos2 for rows on all the CA dimensions is equal to one. 
+The quality of representation of a row or column in n dimensions is simply the sum of the squared cosine of that row or column over the n dimensions. 
+If a row item is well represented by two dimensions, the sum of the cos2 is closed to one. For some of the row items, more than 2 dimensions are required to perfectly represent the data.

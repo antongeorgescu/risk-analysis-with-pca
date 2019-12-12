@@ -1,0 +1,34 @@
+﻿[
+  {
+    "key": "baloon_plot",
+    "infofile": "ContingencyTable.txt"
+  },
+  {
+    "key": "ca_screeplot",
+    "infofile": "CAScreePlot.txt"
+  },
+  {
+    "key": "ca_screeplot_avgline",
+    "infofile": "CAScreePlotAvg.txt"
+  },
+  {
+    "key": "ca_symmetric_biplot",
+    "infofile": "CASymmetricBiplot.txt"
+  },
+  {
+    "key": "ca_rows_cos2_plot",
+    "infofile": "CARowsCos2Plot.txt"
+  },
+  {
+    "key": "ca_rows_cos2_bar",
+    "infofile": "CARowsCos2Bar.txt"
+  },
+  {
+    "key": "ca_rows_contrib_matrix",
+    "infofile": "CARowsContribMatrix.txt"
+  },
+  {
+    "key": "ca_asymmetric_biplot",
+    "infofile": "CAAsymmetricBiplot.txt"
+  }
+]

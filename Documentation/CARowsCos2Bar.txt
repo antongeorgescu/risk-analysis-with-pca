@@ -1,0 +1,1 @@
+﻿It is also possible to visualise the rows' quality of representation by using a barplot.

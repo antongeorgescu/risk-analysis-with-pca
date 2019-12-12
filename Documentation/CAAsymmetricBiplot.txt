@@ -1,0 +1,12 @@
+﻿To make an asymetric biplot, rows (or columns) points are plotted from the standard co-ordinates (S) 
+and the profiles of the columns (or the rows) are plotted from the principale coordinates (P) (M. Bendixen 2003). 
+For a given axis, the standard and principle co-ordinates are related as follows: 
+	P = sqrt( eigenvalue) * S 
+	P: the principal coordinate of a row (or a column) on the axis 
+	eigenvalue: the eigenvalue of the axis 
+
+Depending on the situation, other types of display can be set using the argument map (Nenadic and Greenacre 2007)
+If the angle between two arrows is acute, then their is a strong association between the corresponding row and column. 
+To interpret the distance between rows and and a column you should perpendicularly project row points on the column arrow.
+
+

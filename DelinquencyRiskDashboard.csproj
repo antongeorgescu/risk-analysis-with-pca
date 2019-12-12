@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{60CAEA1A-DF79-45A5-AFBC-3A134F5704FA}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>R_MessageBroker</RootNamespace>
+    <AssemblyName>R-MessageBroker</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DynamicInterop, Version=0.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\DynamicInterop.0.9.1\lib\netstandard2.0\DynamicInterop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Registry, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Win32.Registry.4.5.0\lib\net461\Microsoft.Win32.Registry.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\GrendelStockHunter\KanatiStockHunterDashboard-Basic\bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RDotNet, Version=1.8.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\R.NET.1.8.2\lib\netstandard2.0\RDotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="RDotNet.NativeLibrary">
+      <HintPath>..\..\GrendelStockHunter\KanatiStockHunterDashboard-Basic\bin\Debug\RDotNet.NativeLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security.AccessControl, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.AccessControl.4.5.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Principal.Windows.4.5.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bootstrap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bootstrap.Designer.cs">
+      <DependentUpon>Bootstrap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartInfo.Designer.cs">
+      <DependentUpon>ChartInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartInfoHelper.cs" />
+    <Compile Include="ChartKeyToInfoMapper.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>ChartKeyToInfoMapper.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ChartMagnifier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartMagnifier.Designer.cs">
+      <DependentUpon>ChartMagnifier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documentator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documentator.Designer.cs">
+      <DependentUpon>Documentator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiFormContext.cs" />
+    <Compile Include="Predictor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Predictor.Designer.cs">
+      <DependentUpon>Predictor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SplashForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashForm.Designer.cs">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="ChartKeyToInfoMapper.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>ChartKeyToInfoMapper.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DelinquencyRiskServices\.Rhistory" />
+    <None Include="DelinquencyRiskServices\datasets\logRunsEma.csv" />
+    <None Include="DelinquencyRiskServices\datasets\stocks_compressed_130_149.csv" />
+    <None Include="DelinquencyRiskServices\datasets\stocks_compressed_150_159.csv" />
+    <None Include="DelinquencyRiskServices\datasets\stocks_compressed_160_plus.csv" />
+    <None Include="DelinquencyRiskServices\datasets\stocks_compressed_all.csv" />
+    <None Include="DelinquencyRiskServices\datasets\stocks_compressed_zero.csv" />
+    <None Include="DelinquencyRiskServices\dataset_ca_base_analytics.R" />
+    <None Include="DelinquencyRiskServices\dataset_ca_base_prediction.R" />
+    <None Include="DelinquencyRiskServices\load_packages.R" />
+    <None Include="DelinquencyRiskServices\plots\ca_asymmetric_biplot.png75" />
+    <None Include="DelinquencyRiskServices\RGraendelStockChaser.Rproj" />
+    <None Include="DelinquencyRiskServices\Rpackages\batch\CITATION" />
+    <None Include="DelinquencyRiskServices\Rpackages\batch\DESCRIPTION" />
+    <None Include="DelinquencyRiskServices\Rpackages\batch\help\aliases.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\batch\help\AnIndex" />
+    <None Include="DelinquencyRiskServices\Rpackages\batch\help\batch.rdb" />
+    <None Include="DelinquencyRiskServices\Rpackages\batch\help\batch.rdx" />
+    <None Include="DelinquencyRiskServices\Rpackages\batch\help\paths.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\batch\INDEX" />
+    <None Include="DelinquencyRiskServices\Rpackages\batch\MD5" />
+    <None Include="DelinquencyRiskServices\Rpackages\batch\Meta\features.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\batch\Meta\hsearch.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\batch\Meta\links.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\batch\Meta\nsInfo.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\batch\Meta\package.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\batch\Meta\Rd.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\batch\NAMESPACE" />
+    <None Include="DelinquencyRiskServices\Rpackages\batch\R\batch" />
+    <None Include="DelinquencyRiskServices\Rpackages\batch\R\batch.rdb" />
+    <None Include="DelinquencyRiskServices\Rpackages\batch\R\batch.rdx" />
+    <None Include="DelinquencyRiskServices\Rpackages\corrplot\CITATION" />
+    <None Include="DelinquencyRiskServices\Rpackages\corrplot\DESCRIPTION" />
+    <None Include="DelinquencyRiskServices\Rpackages\corrplot\doc\corrplot-intro.R" />
+    <None Include="DelinquencyRiskServices\Rpackages\corrplot\doc\corrplot-intro.Rmd" />
+    <None Include="DelinquencyRiskServices\Rpackages\corrplot\help\aliases.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\corrplot\help\AnIndex" />
+    <None Include="DelinquencyRiskServices\Rpackages\corrplot\help\corrplot.rdb" />
+    <None Include="DelinquencyRiskServices\Rpackages\corrplot\help\corrplot.rdx" />
+    <None Include="DelinquencyRiskServices\Rpackages\corrplot\help\paths.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\corrplot\INDEX" />
+    <None Include="DelinquencyRiskServices\Rpackages\corrplot\MD5" />
+    <None Include="DelinquencyRiskServices\Rpackages\corrplot\Meta\features.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\corrplot\Meta\hsearch.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\corrplot\Meta\links.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\corrplot\Meta\nsInfo.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\corrplot\Meta\package.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\corrplot\Meta\Rd.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\corrplot\Meta\vignette.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\corrplot\NAMESPACE" />
+    <None Include="DelinquencyRiskServices\Rpackages\corrplot\NEWS" />
+    <None Include="DelinquencyRiskServices\Rpackages\corrplot\R\corrplot" />
+    <None Include="DelinquencyRiskServices\Rpackages\corrplot\R\corrplot.rdb" />
+    <None Include="DelinquencyRiskServices\Rpackages\corrplot\R\corrplot.rdx" />
+    <None Include="DelinquencyRiskServices\Rpackages\factoextra\data\Rdata.rdb" />
+    <None Include="DelinquencyRiskServices\Rpackages\factoextra\data\Rdata.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\factoextra\data\Rdata.rdx" />
+    <None Include="DelinquencyRiskServices\Rpackages\factoextra\DESCRIPTION" />
+    <None Include="DelinquencyRiskServices\Rpackages\factoextra\help\aliases.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\factoextra\help\AnIndex" />
+    <None Include="DelinquencyRiskServices\Rpackages\factoextra\help\factoextra.rdb" />
+    <None Include="DelinquencyRiskServices\Rpackages\factoextra\help\factoextra.rdx" />
+    <None Include="DelinquencyRiskServices\Rpackages\factoextra\help\paths.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\factoextra\INDEX" />
+    <None Include="DelinquencyRiskServices\Rpackages\factoextra\MD5" />
+    <None Include="DelinquencyRiskServices\Rpackages\factoextra\Meta\data.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\factoextra\Meta\features.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\factoextra\Meta\hsearch.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\factoextra\Meta\links.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\factoextra\Meta\nsInfo.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\factoextra\Meta\package.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\factoextra\Meta\Rd.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\factoextra\NAMESPACE" />
+    <None Include="DelinquencyRiskServices\Rpackages\factoextra\NEWS.md" />
+    <None Include="DelinquencyRiskServices\Rpackages\factoextra\R\factoextra" />
+    <None Include="DelinquencyRiskServices\Rpackages\factoextra\R\factoextra.rdb" />
+    <None Include="DelinquencyRiskServices\Rpackages\factoextra\R\factoextra.rdx" />
+    <None Include="DelinquencyRiskServices\Rpackages\FactoMineR\CITATION" />
+    <None Include="DelinquencyRiskServices\Rpackages\FactoMineR\data\children.rda" />
+    <None Include="DelinquencyRiskServices\Rpackages\FactoMineR\data\datalist" />
+    <None Include="DelinquencyRiskServices\Rpackages\FactoMineR\data\decathlon.rda" />
+    <None Include="DelinquencyRiskServices\Rpackages\FactoMineR\data\footsize.rda" />
+    <None Include="DelinquencyRiskServices\Rpackages\FactoMineR\data\geomorphology.rda" />
+    <None Include="DelinquencyRiskServices\Rpackages\FactoMineR\data\health.rda" />
+    <None Include="DelinquencyRiskServices\Rpackages\FactoMineR\data\hobbies.rda" />
+    <None Include="DelinquencyRiskServices\Rpackages\FactoMineR\data\JO.rda" />
+    <None Include="DelinquencyRiskServices\Rpackages\FactoMineR\data\milk.rda" />
+    <None Include="DelinquencyRiskServices\Rpackages\FactoMineR\data\mortality.rda" />
+    <None Include="DelinquencyRiskServices\Rpackages\FactoMineR\data\poison.rda" />
+    <None Include="DelinquencyRiskServices\Rpackages\FactoMineR\data\poison.text.rda" />
+    <None Include="DelinquencyRiskServices\Rpackages\FactoMineR\data\poulet.rda" />
+    <None Include="DelinquencyRiskServices\Rpackages\FactoMineR\data\senso.rda" />
+    <None Include="DelinquencyRiskServices\Rpackages\FactoMineR\data\tea.rda" />
+    <None Include="DelinquencyRiskServices\Rpackages\FactoMineR\data\wine.rda" />
+    <None Include="DelinquencyRiskServices\Rpackages\FactoMineR\DESCRIPTION" />
+    <None Include="DelinquencyRiskServices\Rpackages\FactoMineR\doc\clustering.Rmd" />
+    <None Include="DelinquencyRiskServices\Rpackages\FactoMineR\doc\FactoMineR.pdf" />
+    <None Include="DelinquencyRiskServices\Rpackages\FactoMineR\doc\FactoMineR.Rmd" />
+    <None Include="DelinquencyRiskServices\Rpackages\FactoMineR\help\aliases.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\FactoMineR\help\AnIndex" />
+    <None Include="DelinquencyRiskServices\Rpackages\FactoMineR\help\FactoMineR.rdb" />
+    <None Include="DelinquencyRiskServices\Rpackages\FactoMineR\help\FactoMineR.rdx" />
+    <None Include="DelinquencyRiskServices\Rpackages\FactoMineR\help\paths.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\FactoMineR\INDEX" />
+    <None Include="DelinquencyRiskServices\Rpackages\FactoMineR\MD5" />
+    <None Include="DelinquencyRiskServices\Rpackages\FactoMineR\Meta\data.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\FactoMineR\Meta\features.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\FactoMineR\Meta\hsearch.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\FactoMineR\Meta\links.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\FactoMineR\Meta\nsInfo.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\FactoMineR\Meta\package.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\FactoMineR\Meta\Rd.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\FactoMineR\Meta\vignette.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\FactoMineR\NAMESPACE" />
+    <None Include="DelinquencyRiskServices\Rpackages\FactoMineR\R\FactoMineR" />
+    <None Include="DelinquencyRiskServices\Rpackages\FactoMineR\R\FactoMineR.rdb" />
+    <None Include="DelinquencyRiskServices\Rpackages\FactoMineR\R\FactoMineR.rdx" />
+    <None Include="DelinquencyRiskServices\Rpackages\gplots\ChangeLog" />
+    <None Include="DelinquencyRiskServices\Rpackages\gplots\data\rtPCR.rda" />
+    <None Include="DelinquencyRiskServices\Rpackages\gplots\DESCRIPTION" />
+    <None Include="DelinquencyRiskServices\Rpackages\gplots\doc\BalloonPlot.pdf" />
+    <None Include="DelinquencyRiskServices\Rpackages\gplots\doc\venn.pdf" />
+    <None Include="DelinquencyRiskServices\Rpackages\gplots\doc\venn.R" />
+    <None Include="DelinquencyRiskServices\Rpackages\gplots\doc\venn.Rnw" />
+    <None Include="DelinquencyRiskServices\Rpackages\gplots\help\aliases.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\gplots\help\AnIndex" />
+    <None Include="DelinquencyRiskServices\Rpackages\gplots\help\gplots.rdb" />
+    <None Include="DelinquencyRiskServices\Rpackages\gplots\help\gplots.rdx" />
+    <None Include="DelinquencyRiskServices\Rpackages\gplots\help\paths.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\gplots\INDEX" />
+    <None Include="DelinquencyRiskServices\Rpackages\gplots\MD5" />
+    <None Include="DelinquencyRiskServices\Rpackages\gplots\Meta\data.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\gplots\Meta\features.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\gplots\Meta\hsearch.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\gplots\Meta\links.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\gplots\Meta\nsInfo.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\gplots\Meta\package.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\gplots\Meta\Rd.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\gplots\Meta\vignette.rds" />
+    <None Include="DelinquencyRiskServices\Rpackages\gplots\NAMESPACE" />
+    <None Include="DelinquencyRiskServices\Rpackages\gplots\NEWS" />
+    <None Include="DelinquencyRiskServices\Rpackages\gplots\R\gplots" />
+    <None Include="DelinquencyRiskServices\Rpackages\gplots\R\gplots.rdb" />
+    <None Include="DelinquencyRiskServices\Rpackages\gplots\R\gplots.rdx" />
+    <None Include="DelinquencyRiskServices\Rpackages\gplots\TODO" />
+    <None Include="Documentation\ChartKeyToInfoMapper.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Bootstrap.resx">
+      <DependentUpon>Bootstrap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartInfo.resx">
+      <DependentUpon>ChartInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartMagnifier.resx">
+      <DependentUpon>ChartMagnifier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documentator.resx">
+      <DependentUpon>Documentator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Predictor.resx">
+      <DependentUpon>Predictor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashForm.resx">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TextPDF\TextPDF\TextPDF.csproj">
+      <Project>{b1af05cb-c503-4677-9eda-d7c3cf4f147d}</Project>
+      <Name>TextPDF</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DelinquencyRiskServices\datasets\delinquents_take_5a.txt" />
+    <Content Include="DelinquencyRiskServices\datasets\sorted_compression_results.txt" />
+    <Content Include="DelinquencyRiskServices\datasets\sorted_compression_results_2.txt" />
+    <Content Include="DelinquencyRiskServices\plots\ca_balloonplot.png" />
+    <Content Include="DelinquencyRiskServices\plots\ca_cols_cos2_bar.png" />
+    <Content Include="DelinquencyRiskServices\plots\ca_cols_cos2_plot.png" />
+    <Content Include="DelinquencyRiskServices\plots\ca_rows_contrib_dim12_bar.png" />
+    <Content Include="DelinquencyRiskServices\plots\ca_rows_contrib_dim1_bar.png" />
+    <Content Include="DelinquencyRiskServices\plots\ca_rows_contrib_dim2_bar.png" />
+    <Content Include="DelinquencyRiskServices\plots\ca_rows_contrib_matrix.png" />
+    <Content Include="DelinquencyRiskServices\plots\ca_rows_contrib_scatterplot.png" />
+    <Content Include="DelinquencyRiskServices\plots\ca_rows_cos2_bar.png" />
+    <Content Include="DelinquencyRiskServices\plots\ca_rows_cos2_matrix.png" />
+    <Content Include="DelinquencyRiskServices\plots\ca_rows_cos2_plot.png" />
+    <Content Include="DelinquencyRiskServices\plots\ca_screeplot.png" />
+    <Content Include="DelinquencyRiskServices\plots\ca_screeplot_avgline.png" />
+    <Content Include="DelinquencyRiskServices\plots\ca_symmetric_biplot.png" />
+    <Content Include="DelinquencyRiskServices\Rpackages\batch\html\00Index.html" />
+    <Content Include="DelinquencyRiskServices\Rpackages\batch\html\R.css" />
+    <Content Include="DelinquencyRiskServices\Rpackages\corrplot\doc\corrplot-intro.html" />
+    <Content Include="DelinquencyRiskServices\Rpackages\corrplot\doc\index.html" />
+    <Content Include="DelinquencyRiskServices\Rpackages\corrplot\html\00Index.html" />
+    <Content Include="DelinquencyRiskServices\Rpackages\corrplot\html\R.css" />
+    <Content Include="DelinquencyRiskServices\Rpackages\factoextra\html\00Index.html" />
+    <Content Include="DelinquencyRiskServices\Rpackages\factoextra\html\R.css" />
+    <Content Include="DelinquencyRiskServices\Rpackages\FactoMineR\doc\clustering.html" />
+    <Content Include="DelinquencyRiskServices\Rpackages\FactoMineR\doc\index.html" />
+    <Content Include="DelinquencyRiskServices\Rpackages\FactoMineR\html\00Index.html" />
+    <Content Include="DelinquencyRiskServices\Rpackages\FactoMineR\html\R.css" />
+    <Content Include="DelinquencyRiskServices\Rpackages\gplots\doc\index.html" />
+    <Content Include="DelinquencyRiskServices\Rpackages\gplots\html\00Index.html" />
+    <Content Include="DelinquencyRiskServices\Rpackages\gplots\html\R.css" />
+    <Content Include="Documentation\CARowsContribMatrix.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Documentation\CARowsCos2Bar.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Documentation\CARowsCos2Matrix.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Documentation\CARowsCos2Plot.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Documentation\CAScreePlotAvg.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Documentation\CAAsymmetricBiplot.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Documentation\ContingencyTable.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Documentation\CAScreePlot.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Documentation\CASymmetricBiplot.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\chart_logo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

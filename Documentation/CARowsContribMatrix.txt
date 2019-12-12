@@ -1,0 +1,4 @@
+﻿The contribution of rows (in %) to the definition of the dimensions can be extracted and displayed.
+The row variables with the larger value, contribute the most to the definition of the dimensions. 
+Rows that contribute the most to Dim. 1 and Dim. 2 are the most important in explaining the variability in the data set. 
+Rows that do not contribute much to any dimension or that contribute to the last dimensions are less important.

@@ -1,0 +1,12 @@
+﻿Symetric plot represents the row and column profiles simultaneously in a common space. 
+In this case, only the distance between row points or the distance between column points can be really interpreted. 
+The distance between any row and column items is not meaningful! 
+You can only make a general statements about the observed pattern.
+
+In order to interpret the distance between column and row points,the column profiles must be presented in row space or vice-versa. 
+This type of map is called asymmetric biplot and is going to be generated in another step.
+
+In our graph, rows are represented by blue points and columns by red triangles. 
+The distance between any row points or column points gives a measure of their similarity (or dissimilarity). 
+Row points with similar profile are closed on the factor map. The same holds true for column points.
+
