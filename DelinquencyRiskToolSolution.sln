@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelinquencyRiskDashboard", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{32574489-B940-43F3-ACEB-19CDFE928035}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextPDF", "..\TextPDF\TextPDF\TextPDF.csproj", "{B1AF05CB-C503-4677-9EDA-D7C3CF4F147D}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HelpDocumentation", "HelpDocumentation", "{5C0903C8-6E37-4C6E-9BA8-ECB2787F3F81}"
 	ProjectSection(SolutionItems) = preProject
 		..\HelpDocumentation\architecture-view-components.htm = ..\HelpDocumentation\architecture-view-components.htm
@@ -31,6 +29,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HelpDocumentation", "HelpDo
 		..\HelpDocumentation\multiple-correspondence-analysis.htm = ..\HelpDocumentation\multiple-correspondence-analysis.htm
 		..\HelpDocumentation\toc.hhc = ..\HelpDocumentation\toc.hhc
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextPDF", "TextPDFLib\TextPDF.csproj", "{B1AF05CB-C503-4677-9EDA-D7C3CF4F147D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

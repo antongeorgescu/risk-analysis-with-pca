@@ -1,0 +1,13 @@
+https://github.com/IBM/node-s2i-openshift
+
+while($true){curl http://patientui-example-health-anton.torontomulticlien-650805-0e3e0ef4c9c6d831e8aa6fe01f33bfc4-0002.us-south.containers.appdomain.cloud/info}
+
+while sleep 1; do curl -s http://patientui-example-health-anton.torontomulticlien-650805-0e3e0ef4c9c6d831e8aa6fe01f33bfc4-0002.us-south.containers.appdomain.cloud/info/info; done
+
+git --work-tree="D:\DelinquencyRiskTool" --git-dir="D:\DelinquencyRiskTool\.git" <command>
+git --work-tree="D:\DelinquencyRiskTool" --git-dir="D:\DelinquencyRiskTool\.git" add .
+git --work-tree="D:\DelinquencyRiskTool" --git-dir="D:\DelinquencyRiskTool\.git" commit -m "plots folder added"
+git --work-tree="D:\DelinquencyRiskTool" --git-dir="D:\DelinquencyRiskTool\.git" remote add origin https://github.com/antongeorgescu/risk-analysis-with-pca.git
+git --work-tree="D:\DelinquencyRiskTool" --git-dir="D:\DelinquencyRiskTool\.git" push -u origin master
+git --work-tree="D:\DelinquencyRiskTool" --git-dir="D:\DelinquencyRiskTool\.git" add DelinquencyRiskServices\plots
+echo "# keep this file for tracking purposes" >> .gitkeeper
