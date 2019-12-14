@@ -112,7 +112,7 @@ namespace R_MessageBroker
             REngine engine;
             try
             {
-
+                // Checks indirectly if R is installed
                 REngine.SetEnvironmentVariables();
                 // There are several options to initialize the engine, but by default the following suffice:
                 engine = REngine.GetInstance();
