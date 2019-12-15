@@ -132,12 +132,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>ChartKeyToInfoMapper.Designer.cs</LastGenOutput>
     </None>
-    <None Include="DelinquencyRiskServices\datasets\logRunsEma.csv" />
-    <None Include="DelinquencyRiskServices\datasets\stocks_compressed_130_149.csv" />
-    <None Include="DelinquencyRiskServices\datasets\stocks_compressed_150_159.csv" />
-    <None Include="DelinquencyRiskServices\datasets\stocks_compressed_160_plus.csv" />
-    <None Include="DelinquencyRiskServices\datasets\stocks_compressed_all.csv" />
-    <None Include="DelinquencyRiskServices\datasets\stocks_compressed_zero.csv" />
     <None Include="DelinquencyRiskServices\dataset_ca_base_analytics.R" />
     <None Include="DelinquencyRiskServices\dataset_ca_base_prediction.R" />
     <None Include="DelinquencyRiskServices\load_packages.R" />
@@ -177,8 +171,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DelinquencyRiskServices\datasets\delinquents_take_5a.txt" />
-    <Content Include="DelinquencyRiskServices\datasets\sorted_compression_results.txt" />
-    <Content Include="DelinquencyRiskServices\datasets\sorted_compression_results_2.txt" />
     <Content Include="Documentation\CARowsContribMatrix.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

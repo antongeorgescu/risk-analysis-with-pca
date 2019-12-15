@@ -150,6 +150,13 @@ namespace R_MessageBroker
             Process process = Process.Start(start);
 
             string output = await process.StandardOutput.ReadToEndAsync();
+
+            if (output.Contains("[Error]"))
+            {
+                tbResults.AppendText(output);
+                return;
+            }
+
             int lines = output.Length;
 
             lvPics.Clear();
