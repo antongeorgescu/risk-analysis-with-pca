@@ -1,1 +1,2 @@
 ﻿You can visualize the cos2 of row points on all the dimensions using a matrix based correlation plot.
+It shows the importance of a principal component for a given observation (vector of original variables). 

@@ -8,7 +8,7 @@
     "infofile": "CAScreePlot.txt"
   },
   {
-    "key": "ca_screeplot_avgline",
+    "key": "**scree_plot_avgline",
     "infofile": "CAScreePlotAvg.txt"
   },
   {
@@ -16,7 +16,7 @@
     "infofile": "CASymmetricBiplot.txt"
   },
   {
-    "key": "ca_rows_cos2_plot",
+    "key": "**ca_rows_cos2_plot",
     "infofile": "CARowsCos2Plot.txt"
   },
   {
@@ -24,7 +24,7 @@
     "infofile": "CARowsCos2Bar.txt"
   },
   {
-    "key": "ca_rows_contrib_matrix",
+    "key": "**ca_rows_contrib_matrix",
     "infofile": "CARowsContribMatrix.txt"
   },
   {
