@@ -86,7 +86,7 @@ namespace R_MessageBroker
             // read dataset from file
             var appPath = Assembly.GetExecutingAssembly().Location;
             var appPathArray = appPath.Split('\\');
-            Array.Resize<string>(ref appPathArray, appPathArray.Length - 4);
+            Array.Resize<string>(ref appPathArray, appPathArray.Length - 3);
             var rScriptPath = $"{string.Join("\\", appPathArray)}\\DelinquencyRiskServices";
             string filePath = $"{rScriptPath}\\{ConfigurationSettings.AppSettings["contingencyTableFilePath"]}";
 
